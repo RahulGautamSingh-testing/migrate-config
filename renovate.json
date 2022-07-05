@@ -31,7 +31,6 @@
    "gitFs":false,
    "deepExtract":true,
    "ignoreNpmrcFile":true,
-   "separateMajorReleases":true,
    "separatePatchReleases":true,
    "suppressNotifications":[
       "lockFileErrors",
@@ -137,16 +136,6 @@
    "devDependencies":{
       "automerge":"minor",
       "schedule":null
-   },
-   "nvmrc":{
-      "pathRules":[
-         {
-            "paths":[
-               "node/**"
-            ],
-            "extends":"node"
-         }
-      ]
    },
    "depTypes":[
       "dependencies",
