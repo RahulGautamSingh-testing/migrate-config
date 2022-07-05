@@ -45,7 +45,6 @@
    "upgradeInRange":true,
    "trustLevel":"high",
    "automergeType":"branch-push",
-   "branchName":"{{{branchPrefix}}}{{{managerBranchPrefix}}}{{{branchTopic}}}{{{baseDir}}}",
    "managerBranchPrefix":"foo",
    "branchPrefix":"renovate/{{parentDir}}-",
    "ignoreNodeModules":true,
@@ -68,8 +67,6 @@
    "meteor":true,
    "autodiscover":"true",
    "schedule":"on the last day of the month",
-   "commitMessage":"{{semanticPrefix}}some commit message {{depNameShort}} {{lookupName}}",
-   "prTitle":"{{semanticPrefix}}some pr title",
    "semanticPrefix":"fix(deps): ",
    "pathRules":[
       {
