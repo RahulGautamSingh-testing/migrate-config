@@ -48,7 +48,6 @@
    "trustLevel":"high",
    "automergeType":"branch-push",
    "branchName":"{{{branchPrefix}}}{{{managerBranchPrefix}}}{{{branchTopic}}}{{{baseDir}}}",
-   "baseBranch":"next",
    "managerBranchPrefix":"foo",
    "branchPrefix":"renovate/{{parentDir}}-",
    "renovateFork":true,
