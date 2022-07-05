@@ -26,8 +26,6 @@
       "helpers:oddIsUnstable"
    ],
    "maintainYarnLock":true,
-   "onboarding":"false",
-   "multipleMajorPrs":true,
    "gitFs":false,
    "deepExtract":true,
    "ignoreNpmrcFile":true,
@@ -50,7 +48,6 @@
    "branchName":"{{{branchPrefix}}}{{{managerBranchPrefix}}}{{{branchTopic}}}{{{baseDir}}}",
    "managerBranchPrefix":"foo",
    "branchPrefix":"renovate/{{parentDir}}-",
-   "renovateFork":true,
    "ignoreNodeModules":true,
    "node":{
       "enabled":true
