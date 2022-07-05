@@ -1,0 +1,141 @@
+   endpoints: [{}] as never,
+        enabled: true,
+        platform: PlatformId.Github,
+        hostRules: [
+          {
+            platform: 'docker',
+            endpoint: 'https://docker.io',
+            host: 'docker.io',
+            username: 'some-username',
+            password: 'some-password',
+          },
+        ],
+        compatibility: {
+          python: '3.7',
+        },
+        extends: [
+          ':automergeBranchMergeCommit',
+          'default:js-app',
+          'config:library',
+          ':masterIssue',
+          'helpers:oddIsUnstable',
+        ],
+        maintainYarnLock: true,
+        onboarding: 'false' as never,
+        multipleMajorPrs: true,
+        gitFs: false,
+        deepExtract: true,
+        ignoreNpmrcFile: true,
+        separateMajorReleases: true,
+        separatePatchReleases: true,
+        suppressNotifications: ['lockFileErrors', 'prEditNotification'],
+        automerge: 'none' as never,
+        automergeMajor: false,
+        binarySource: 'auto',
+        automergeMinor: true,
+        automergePatch: true,
+        masterIssue: 'true',
+        masterIssueTitle: 'foo',
+        gomodTidy: true,
+        upgradeInRange: true,
+        trustLevel: 'high',
+        automergeType: 'branch-push',
+        branchName:
+          '{{{branchPrefix}}}{{{managerBranchPrefix}}}{{{branchTopic}}}{{{baseDir}}}',
+        baseBranch: 'next',
+        managerBranchPrefix: 'foo',
+        branchPrefix: 'renovate/{{parentDir}}-',
+        renovateFork: true,
+        ignoreNodeModules: true,
+        node: {
+          enabled: true,
+        },
+        poetry: {
+          rebaseStalePrs: true,
+          versionScheme: 'pep440',
+        },
+        pipenv: {
+          rebaseStalePrs: false,
+          rebaseConflictedPrs: true,
+        },
+        pip_setup: {
+          rebaseConflictedPrs: false,
+        },
+        rebaseStalePrs: null,
+        rebaseConflictedPrs: true,
+        meteor: true,
+        autodiscover: 'true' as never,
+        schedule: 'on the last day of the month' as never,
+        commitMessage:
+          '{{semanticPrefix}}some commit message {{depNameShort}} {{lookupName}}',
+        prTitle: '{{semanticPrefix}}some pr title',
+        semanticPrefix: 'fix(deps): ',
+        pathRules: [
+          {
+            paths: ['examples/**'],
+            extends: ['foo'],
+          },
+        ],
+        peerDependencies: {
+          versionStrategy: 'widen',
+        },
+        packageRules: [
+          {
+            packagePatterns: '^(@angular|typescript)' as never,
+            groupName: ['angular packages'] as never,
+            excludedPackageNames: 'foo',
+          },
+          {
+            packagePatterns: ['^foo'],
+            groupName: ['foo'] as never,
+          },
+          {
+            packageName: 'angular',
+            packagePattern: 'ang',
+            enabled: false,
+          },
+          {
+            packageNames: ['guava'],
+            versionScheme: 'maven',
+          },
+          {
+            packageNames: ['foo'],
+            packageRules: [
+              {
+                depTypeList: ['bar'],
+                automerge: true,
+              },
+            ],
+          },
+        ],
+        exposeEnv: true,
+        lockFileMaintenance: {
+          exposeEnv: false,
+          gitFs: true,
+          automerge: 'any' as never,
+          schedule: 'before 5am every day' as never,
+        },
+        devDependencies: {
+          automerge: 'minor',
+          schedule: null,
+        },
+        nvmrc: {
+          pathRules: [
+            {
+              paths: ['node/**'],
+              extends: 'node',
+            },
+          ],
+        },
+        depTypes: [
+          'dependencies',
+          {
+            depType: 'optionalDependencies',
+            respectLatest: false,
+            automerge: 'minor',
+            schedule: 'before 5am on Mondays',
+          },
+        ],
+        raiseDeprecationWarnings: false,
+        enabledManagers: ['yarn'],
+      }
