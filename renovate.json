@@ -72,7 +72,8 @@
       {
          "paths":[
             "examples/**"
-         ]
+         ],
+         "automerge": false
       }
    ],
    "peerDependencies":{
